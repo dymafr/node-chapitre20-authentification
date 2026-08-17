@@ -5,7 +5,7 @@ const { app } = require('../app');
 
 app.use(
   session({
-    secret: 'cersei',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {

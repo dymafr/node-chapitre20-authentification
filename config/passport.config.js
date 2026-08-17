@@ -53,8 +53,8 @@ passport.use(
   'google',
   new GoogleStrategy(
     {
-      clientID: 'VOTRE ID',
-      clientSecret: 'VOTRE SECRET',
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: '/auth/google/cb',
     },
     async (accessToken, refreshToken, profile, done) => {
